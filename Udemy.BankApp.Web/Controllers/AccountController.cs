@@ -23,5 +23,20 @@ namespace Udemy.BankApp.Web.Controllers
 			}).SingleOrDefault(x => x.ID == id);
 			return View(userInfo);
 		}
+
+		[HttpPost]
+		public IActionResult Create(AccountCreateModel model)
+		{
+			_context.Accounts.Add(new Data.Entities.Account
+			{
+				ApplicationUserID = model.ApplicationUserID,
+                AccountNumber = model.AccountNumber,
+				Balance = model.Balance
+			});
+			_context.SaveChanges();
+
+
+            return RedirectToAction("Index", "Home");
+		}
 	}
 }

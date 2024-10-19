@@ -1,12 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using Udemy.BankApp.Web.Data.Context;
 using Udemy.BankApp.Web.Models;
 
 namespace Udemy.BankApp.Web.Controllers
 {
-	public class HomeController : Controller
+    public class HomeController : Controller
 	{
 		private readonly BankContext _context;
 
