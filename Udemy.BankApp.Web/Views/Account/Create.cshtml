@@ -1,0 +1,22 @@
+﻿@model UserListModel
+@{
+	Layout = "~/views/shared/_layout.cshtml";
+}
+
+<div class="row">
+	<div class="col-6">
+		<h3>Hesap Eklenecek Kişinin Bilgileri</h3>
+		<p>
+			Kullanıcının Adı : @Model.Name
+		</p>
+		<p>
+			Kullanıcının Adı : @Model.Surname
+		</p>
+		<p>
+			Aktif Hesap Sayısı : <getAccountCount application-user-id="@Model.ID" ></getAccountCount>
+		</p>
+	</div>
+	<div class="col-6">
+		<h4>Ekleme İşlemleri</h4>
+	</div>
+</div>

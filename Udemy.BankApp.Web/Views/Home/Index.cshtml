@@ -1,6 +1,27 @@
-﻿@{
+﻿@model List<UserListModel>
+@{
 	Layout = "~/views/shared/_layout.cshtml";
 }
-<p>
-	Index Works
-</p>
+
+<table class="mt-4 table table-hover table-bordered table-sm">
+	<thead>
+		<tr>
+			<td>Name</td>
+			<td>Surname</td>
+			<td></td>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>@item.Name</td>
+				<td>@item.Surname</td>
+				<td><getAccountCount application-user-id="@item.ID"></getAccountCount></td>
+				<td>
+					<a asp-action="Create" asp-controller="Account" asp-route-id="@item.ID">Create New Account</a>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>

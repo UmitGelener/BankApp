@@ -12,7 +12,15 @@ namespace AspNetCore
     using global::Microsoft.AspNetCore.Mvc;
     using global::Microsoft.AspNetCore.Mvc.Rendering;
     using global::Microsoft.AspNetCore.Mvc.ViewFeatures;
+#nullable restore
+#line 3 "C:\Users\pc\source\repos\Udemy.BankApp\Udemy.BankApp.Web\Views\_ViewImports.cshtml"
+using Udemy.BankApp.Web.Data.Entities;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"Sha256", @"2efe4a7c5099d4afaf8a68dd0bcbf79025190fcc01a56b479f86b99a0c64e4db", @"/Views/Shared/_Layout.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"Sha256", @"c96ea854b6bada01c4a762d7662c8e04daca8024544d34ef890bbdcab19e6b03", @"/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Views_Shared__Layout : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     #nullable disable
@@ -47,7 +55,7 @@ namespace AspNetCore
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("<!DOCTYPE html>\r\n\r\n<html>\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2efe4a7c5099d4afaf8a68dd0bcbf79025190fcc01a56b479f86b99a0c64e4db4134", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2efe4a7c5099d4afaf8a68dd0bcbf79025190fcc01a56b479f86b99a0c64e4db4527", async() => {
                 WriteLiteral("\r\n    <meta name=\"viewport\" content=\"width=device-width\" />\r\n\t<title>");
 #nullable restore
 #line 6 "C:\Users\pc\source\repos\Udemy.BankApp\Udemy.BankApp.Web\Views\Shared\_Layout.cshtml"
@@ -57,7 +65,7 @@ namespace AspNetCore
 #line hidden
 #nullable disable
                 WriteLiteral("</title>\r\n\t");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "2efe4a7c5099d4afaf8a68dd0bcbf79025190fcc01a56b479f86b99a0c64e4db4730", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "2efe4a7c5099d4afaf8a68dd0bcbf79025190fcc01a56b479f86b99a0c64e4db5123", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -72,7 +80,7 @@ namespace AspNetCore
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n\t");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "2efe4a7c5099d4afaf8a68dd0bcbf79025190fcc01a56b479f86b99a0c64e4db5930", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "2efe4a7c5099d4afaf8a68dd0bcbf79025190fcc01a56b479f86b99a0c64e4db6323", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -99,7 +107,7 @@ namespace AspNetCore
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2efe4a7c5099d4afaf8a68dd0bcbf79025190fcc01a56b479f86b99a0c64e4db7836", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2efe4a7c5099d4afaf8a68dd0bcbf79025190fcc01a56b479f86b99a0c64e4db8229", async() => {
                 WriteLiteral("\r\n    <div class=\"container lead\">\r\n        ");
 #nullable restore
 #line 12 "C:\Users\pc\source\repos\Udemy.BankApp\Udemy.BankApp.Web\Views\Shared\_Layout.cshtml"

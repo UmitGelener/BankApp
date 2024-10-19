@@ -1,28 +1,27 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using Udemy.BankApp.Web.Data.Context;
 using Udemy.BankApp.Web.Models;
 
 namespace Udemy.BankApp.Web.Controllers
 {
-	public class HomeController : Controller
+	public class AccountController : Controller
 	{
 		private readonly BankContext _context;
 
-		public HomeController(BankContext context)
+		public AccountController(BankContext context)
 		{
 			_context = context;
 		}
-
-		public IActionResult Index()
+		public IActionResult Create(int id)
 		{
-			return View(_context.ApplicationUsers.Select(x=>new UserListModel
+			var userInfo = _context.ApplicationUsers.Select(x=>new UserListModel
 			{
-				ID = x.ID,
+				ID=x.ID,
 				Name = x.Name,
 				Surname = x.Surname
-			}).ToList());
+			}).SingleOrDefault(x => x.ID == id);
+			return View(userInfo);
 		}
 	}
 }
