@@ -1,16 +1,14 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
 using Udemy.BankApp.Web.Data.Context;
+using Udemy.BankApp.Web.Data.Interfaces;
+using Udemy.BankApp.Web.Data.Mapping;
+using Udemy.BankApp.Web.Data.Repositories;
 
 namespace Udemy.BankApp.Web
 {
@@ -24,6 +22,8 @@ namespace Udemy.BankApp.Web
 			{
 				opt.UseSqlServer("Server=DESKTOP-CHBBTJD;Database=BankDb;Trusted_Connection=True;Connect Timeout=30;MultipleActiveResultSets=True;");
 			});
+			services.AddScoped<IApplicationUserRepository, ApplicationUserRepository>();
+			services.AddScoped<IUserMapper, UserMapper>();
 			services.AddControllersWithViews();
 		}
 

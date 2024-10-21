@@ -1,27 +1,26 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Linq;
 using Udemy.BankApp.Web.Data.Context;
-using Udemy.BankApp.Web.Models;
+using Udemy.BankApp.Web.Data.Interfaces;
+using Udemy.BankApp.Web.Data.Mapping;
+using Udemy.BankApp.Web.Data.Repositories;
 
 namespace Udemy.BankApp.Web.Controllers
 {
-    public class HomeController : Controller
+	public class HomeController : Controller
 	{
 		private readonly BankContext _context;
-
-		public HomeController(BankContext context)
+		private readonly IApplicationUserRepository _applicationUserRepository;
+		private readonly IUserMapper _mapper;
+		public HomeController(BankContext context, IApplicationUserRepository applicationUserRepository, IUserMapper mapper)
 		{
 			_context = context;
+			_applicationUserRepository = applicationUserRepository;
+			_mapper = mapper;
 		}
 
 		public IActionResult Index()
 		{
-			return View(_context.ApplicationUsers.Select(x=>new UserListModel
-			{
-				ID = x.ID,
-				Name = x.Name,
-				Surname = x.Surname
-			}).ToList());
+			return View(_mapper.MapToListOfUserList(_applicationUserRepository.GetAll()));
 		}
 	}
 }
