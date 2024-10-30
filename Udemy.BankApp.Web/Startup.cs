@@ -26,6 +26,7 @@ namespace Udemy.BankApp.Web
 			services.AddScoped<IUserMapper, UserMapper>();
 			services.AddScoped<IAccountRepository, AccountRepository>();
 			services.AddScoped<IAccountMapper, AccountMapper>();
+			services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 			services.AddControllersWithViews();
 		}
 

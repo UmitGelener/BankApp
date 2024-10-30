@@ -74,3 +74,5 @@ C:\Users\pc\source\repos\Udemy.BankApp\Udemy.BankApp.Web\obj\Debug\net5.0\Udemy.
 C:\Users\pc\source\repos\Udemy.BankApp\Udemy.BankApp.Web\obj\Debug\net5.0\Udemy.BankApp.Web.sourcelink.json
 C:\Users\pc\source\repos\Udemy.BankApp\Udemy.BankApp.Web\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\pc\source\repos\Udemy.BankApp\Udemy.BankApp.Web\obj\Debug\net5.0\Razor\Views\Account\Create.cshtml.g.cs
+C:\Users\pc\source\repos\Udemy.BankApp\Udemy.BankApp.Web\obj\Debug\net5.0\Razor\Views\Account\GetByUserId.cshtml.g.cs
+C:\Users\pc\source\repos\Udemy.BankApp\Udemy.BankApp.Web\obj\Debug\net5.0\Razor\Views\Account\SendMoney.cshtml.g.cs
