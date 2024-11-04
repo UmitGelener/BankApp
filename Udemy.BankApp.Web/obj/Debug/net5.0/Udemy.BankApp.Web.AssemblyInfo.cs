@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Udemy.BankApp.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2e9d2aa2b76a186ef1764e3051dcbdab54b6b374")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d726d79c0bda6a4d57a47f56d73e1ae68da93616")]
 [assembly: System.Reflection.AssemblyProductAttribute("Udemy.BankApp.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Udemy.BankApp.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -6,9 +6,8 @@ using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 using System.IO;
 using Udemy.BankApp.Web.Data.Context;
-using Udemy.BankApp.Web.Data.Interfaces;
 using Udemy.BankApp.Web.Data.Mapping;
-using Udemy.BankApp.Web.Data.Repositories;
+using Udemy.BankApp.Web.Data.UnitOfWork;
 
 namespace Udemy.BankApp.Web
 {
@@ -22,11 +21,12 @@ namespace Udemy.BankApp.Web
 			{
 				opt.UseSqlServer("Server=DESKTOP-CHBBTJD;Database=BankDb;Trusted_Connection=True;Connect Timeout=30;MultipleActiveResultSets=True;");
 			});
-			services.AddScoped<IApplicationUserRepository, ApplicationUserRepository>();
+			services.AddScoped<IUow, Uow>();
+			//services.AddScoped<IApplicationUserRepository, ApplicationUserRepository>();
 			services.AddScoped<IUserMapper, UserMapper>();
-			services.AddScoped<IAccountRepository, AccountRepository>();
+			//services.AddScoped<IAccountRepository, AccountRepository>();
 			services.AddScoped<IAccountMapper, AccountMapper>();
-			services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+			//services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 			services.AddControllersWithViews();
 		}
 
